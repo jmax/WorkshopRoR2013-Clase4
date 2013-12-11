@@ -1,0 +1,29 @@
+<li class="tweet">
+  <div class="body">
+    <%= tweet.body %>
+  </div>
+
+  <div class="timestamp">
+    <p class="author">
+      <%= tweet.author.email %>
+    </p>
+
+    <p class="create-at">
+      <%= tweet.created_at.strftime("%d/%m/%Y - %H:%M") %>
+    </p>
+
+    <% if current_user && current_user.can_remove?(tweet) %>
+    <p class="action">
+      <%= link_to "Eliminar", tweet, method: :delete, confirm: confirm_message_for("eliminar") %>
+    </p>
+    <% end %>
+
+    <% if current_user && current_user.can_report?(tweet) %>
+    <p class="action">
+      <%= link_to "Reportar este Tweet", [:report, tweet], method: :put, confirm: confirm_message_for("reportar") %>
+    </p>
+    <% else %>
+      <p>Lo reportaste!</p>
+    <% end %>
+  </div>
+</li>

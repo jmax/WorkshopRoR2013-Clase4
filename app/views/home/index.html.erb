@@ -1,0 +1,14 @@
+<% if @tweets.any? %>
+  <div class="call-to-action">
+    <%= link_to "Agregar un Tweet", new_tweet_path %>
+  </div>
+
+  <ul class="tweets">
+    <%= render @tweets %>
+  </ul>
+<% else %>
+  <p class="message">
+    No hay tweets creados.
+    <%= link_to "Crear el primer Tweet", new_tweet_path %>
+  </p>
+<% end %>

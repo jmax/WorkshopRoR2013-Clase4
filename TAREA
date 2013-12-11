@@ -1,0 +1,23 @@
+TAREA
+
+MiGroupon
+
+- Sistema de usuarios. (https://github.com/plataformatec/devise)
+- El layout tiene que mostrar links para signin y signup cuando no hay usuario logueado.
+- El layout tiene que mostrar links para editar la cuenta, y signout cuando hay un usuario logueado.
+- El home del sitio muestra TODOS los Discounts disponibles ordenados por el más reciente.
+  > disponible si expired_on > Hoy
+  > disponible si fue reportado menos de 3 veces.
+- El usuario tiene que poder crear un discount (title, description:text, expired_on:date).
+- El usuario puede reportar un discount.
+- El usuario puede editar UNICAMENTE sus discounts.
+- El usuario puede eliminar UNICAMENTE sus discounts.
+- El usuario puede agregar CUALQUIER discount a sus favoritos (solo lo puede hacer una vez).
+- El sistema debe trackear cuántas veces faveado un discount.
+- El sistema tiene que mostrar una ficha (show) del discount. (vista publica).
+  > Pagina disponible UNICAMENTE para los discounts que esten disponibles
+  > Todos los datos.
+  > Usuarios que lo reportaron.
+  > Usuarios que lo favearon.
+- Tiene que correr en Heroku.
+- Tiene que hosteado en Github.
